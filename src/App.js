@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Replay from './replay';
 
+const ans = 'abcdefgstop';
+const temp = [
+  { time: 0, word: 'a' },
+  { time: 100, word: 'a' },
+  { time: 100, word: 'a' },
+  { time: 100, word: 'a' },
+  { time: 100, word: 'a' },
+  { time: 1000, word: 'x' },
+  { time: 500, word: 'x' },
+  { time: 500, word: 'x' },
+  { time: 1000, word: 'a' },
+  { time: 1000, word: 'x' },
+  { time: 1000, word: 'a' },
+  { time: 1000, word: 'x' },
+  { time: 1000, word: '\xa0' },
+  { time: 100, word: '\xa0' },
+  { time: 200, word: '\xa0' },
+  { time: 200, word: '\xa0' },
+  { time: 200, word: '\xa0' },
+  { time: 200, word: '\xa0' },
+  { time: 200, word: '\xa0' },
+  { time: 100, word: 'a' },
+  { time: 100, word: 'a' },
+];
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Replay text={temp} ans={ans} />
+    </>
   );
 }
 
